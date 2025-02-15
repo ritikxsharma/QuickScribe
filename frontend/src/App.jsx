@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <ToastContainer position="bottom-right" />
+        <ToastContainer position="bottom-right" theme="dark" autoClose={800} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:name" element={<NoteEditor />} />

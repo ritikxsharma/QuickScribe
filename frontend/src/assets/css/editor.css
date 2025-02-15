@@ -1,0 +1,57 @@
+.editor-container {
+  width: 100vw;
+  height: 100vh;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 0 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.copy-btn {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  padding: 8px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #646cff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background-color: #747bff;
+  }
+}
+
+.tiptap {
+  padding-top: 30px;
+  text-align: left;
+  outline: none;
+  min-height: calc(100vh - 40px);
+  overflow-y: auto;
+  font-size: 18px;
+
+  p{
+    min-height: 1.5em;
+    letter-spacing: 1.5px;
+    position: relative;
+  }
+
+}
+
+.is-empty::before {
+  content: attr(data-placeholder);
+  color: #aaa;
+  font-style: italic;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+}
