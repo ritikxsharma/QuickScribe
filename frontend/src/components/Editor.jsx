@@ -57,9 +57,12 @@ const Editor = ({ name, content, setContent, socket }) => {
   useEffect(() => {
     socket.on("update-note", (data) => {
       if(data.name === name && editor){
+        const { from, to } = editor.state.selection
         editor.commands.setContent(data.content, false, {
           preserveWhitespace: "full"
         })
+        editor.commands.setTextSelection({ from, to })
+        
       }
     })
     return () => {
