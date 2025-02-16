@@ -34,10 +34,16 @@
   &:hover {
     background-color: #747bff;
   }
+
+  @media (max-width: 768px){
+    padding: 5px 8px;
+    right: 10px;
+  }
+
 }
 
 .tiptap {
-  padding-top: 30px;
+  padding-top: 40px;
   text-align: left;
   outline: none;
   min-height: calc(100vh - 40px);
